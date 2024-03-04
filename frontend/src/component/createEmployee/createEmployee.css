@@ -1,0 +1,92 @@
+.createemployee-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Set a background color for the entire container */
+}
+
+.createemployee-main {
+  width: 40%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 20px; /* Add some top margin for better spacing */
+}
+
+.createemployee-main h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.createemployee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.createemployee-input-radio-container {
+  display: flex;
+  gap: 15px;
+}
+
+.createemployee-input-dropdown,
+.createemployee-input-text,
+.createemployee-input-checkbox-container input,
+.createemployee-file-input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.createemployee-input-checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.createemployee-file-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 5px;
+}
+
+/* Add some styling for the checkboxes */
+.createemployee-input-checkbox-container span {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.createemployee-btn{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+.createemployee-btn-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.createemployee-title{
+    padding-bottom: 20px;
+}
+
+.success-message{
+  text-align: center;
+  margin-bottom: 10px;
+}

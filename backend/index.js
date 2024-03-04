@@ -1,16 +1,24 @@
-const express = require('express')
-const socketio = require('socket.io')
-const http = require('http')
+const express = require("express")
+const path = require('path')
+const cors = require('cors')
 
-const joinRoute = require('./router/router')
-const chatRoute = require('./router/chatRoute')
+const userRoute = require('./router/userRoute')
+const employeeRoute = require('./router/employeeRoute')
+const {DBconnection} = require('./config/connectDB')
+
+DBconnection()
 
 const app = express()
-const server = http.createServer(app)
+app.use(cors())
+app.use(express.json())
+app.use('/public', express.static(path.join(__dirname, 'frontend', 'public')));
 
-const io = socketio(server)
+app.get("/", (req, res) => {
+  res.send("Hello World!")
+})
 
-app.use('/api',joinRoute)
-app.use('/api/chat',chatRoute)
+app.use('/api/user',userRoute)
+app.use('/api/employee',employeeRoute)
 
-server.listen(5000,()=> console.log('server running in port 5000'))
+
+app.listen(8082,()=> console.log("server up and running!"))

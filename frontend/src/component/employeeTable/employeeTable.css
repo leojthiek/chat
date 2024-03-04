@@ -1,0 +1,88 @@
+/* employeeTable.css */
+
+/* Navigation Styles */
+.employeeTable-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  
+  .employeeTable-nav-container h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .employeeTable-secondNav-container {
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+  }
+  
+  .employeeTable-search-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .employeeTable-search-container p {
+    margin: 0;
+  }
+  
+  .employeeTable-search-container input {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+  }
+  
+  .employeeTable-secondNav-container button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .employeeTable-secondNav-container button:hover {
+    background-color: #3e8e41;
+  }
+
+.employee-table {
+    width: 100%; 
+    border-collapse: collapse;
+  }
+  
+  .employee-table th,
+  .employee-table td {
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    text-align: left; 
+  }
+  
+  .employee-table thead th {
+    background-color: #f2f2f2; 
+  }
+  
+  .employee-table .action-buttons {
+    display: flex; 
+    gap: 5px; 
+  }
+  
+  .employee-table .action-buttons button {
+    padding: 5px 10px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  
+  .employee-table .action-buttons button:hover {
+    background-color: #ddd; 
+  }
+
+  .table-image{
+    width: 30px;
+    height: 30px;
+  }
+  

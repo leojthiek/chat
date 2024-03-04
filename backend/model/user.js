@@ -5,7 +5,6 @@ const userSchema = mongoose.Schema(
        name:{
         type:String,
         required:true,
-        unique:true
        },
 
        email:{
@@ -16,6 +15,10 @@ const userSchema = mongoose.Schema(
        password:{
         type:String,
         required:true
+       },
+       admin:{
+        type:Boolean,
+        default:true,
        }
     },{
         timestamps:true
