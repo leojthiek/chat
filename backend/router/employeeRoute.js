@@ -22,7 +22,7 @@ const upload = multer({storage:storage})
 
 router.route('/all-employee').get(protect,admin,getAllEmployee)
 router.route('/create-employee').post(protect,admin,upload.single('image'), createEmployee)
-router.route("/update-employee").put(protect, admin, upload.single("file"), updateEmployee);
+router.route("/update-employee").put(protect, admin, upload.single("image"), updateEmployee);
 router.route("/delete-employee").delete(protect,admin,deleteEmployee)
 router.route('/one-employee').get(protect,admin,getOneEmployee)
 
