@@ -81,9 +81,8 @@ export default function EditEmployee({ employeeId }) {
       const newForm = new FormData()
 
       Object.entries(formdata).forEach(([key, value]) => {
-        newForm.append(key, value);
-      });
-      
+        newForm.append(key, value)
+      })
 
       const response = await api.put(`/employee/update-employee`, newForm, {
         params: { employeeId },
@@ -91,9 +90,7 @@ export default function EditEmployee({ employeeId }) {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${user.token}`,
         },
-      
-      });
-      
+      })
 
       if (response.status === 200) {
         setSuccessMessage("Updated Employee successfully")
@@ -118,8 +115,8 @@ export default function EditEmployee({ employeeId }) {
     <div className='createemployee-container'>
       <div className='createemployee-main'>
         <h1 className='createemployee-title'>Update Employee</h1>
-        {errorMessage && <ErrorComponent error={errorMessage}/>}
-        {successMessage && <p className="success-message">{successMessage}</p>}
+        {errorMessage && <ErrorComponent error={errorMessage} />}
+        {successMessage && <p className='success-message'>{successMessage}</p>}
         <form className='createemployee-form' onSubmit={handleUpdate}>
           <input
             type='text'
@@ -164,21 +161,17 @@ export default function EditEmployee({ employeeId }) {
               <input
                 type='radio'
                 name='gender'
-                value={formdata.gender}
+                value='Male'
                 checked={formdata.gender === "Male"}
-                onChange={(e) =>
-                  setFormdata({ ...formdata, gender: e.target.checked })
-                }
+                onChange={() => setFormdata({ ...formdata, gender: "Male" })}
               />
               <span>Male</span>
               <input
                 type='radio'
                 name='gender'
-                value={formdata.gender}
+                value='Female'
                 checked={formdata.gender === "Female"}
-                onChange={(e) =>
-                  setFormdata({ ...formdata, gender: e.target.checked })
-                }
+                onChange={() => setFormdata({ ...formdata, gender: "Female" })}
               />
               <span>Female</span>
             </div>
